@@ -1,4 +1,4 @@
-import { Code, Palette, Braces, Layers, Link as LinkIcon } from "lucide-react";
+import { Code, Palette, Braces, Layers, Link as LinkIcon, Orbit } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,12 @@ const categories = [
     title: "CSS Learning",
     description: "Css Styling propertys with examples",
     path: "/css-learning",
+  },
+  {
+    icon: Orbit,
+    title: "CSS Animation",
+    description: "Learn CSS animations with examples",
+    path: "/css-animation",
   },
   {
     icon: Braces,

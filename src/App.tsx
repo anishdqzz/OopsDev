@@ -22,6 +22,7 @@ import HtmlLearning from "./pages/HtmlLearning";
 import CssLearning from "./pages/CssLearning";
 import ReactCheatsheet from "./pages/react";
 import CdnLinks from "./pages/cdn-links";
+import CssAnimation from "./pages/CssAnimation";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/ui-components" element={<UiComponents />} />
           <Route path="/react" element={<ReactCheatsheet />} />
           <Route path="/cdn-links" element={<CdnLinks />} />
+          <Route path="/css-animation" element={<CssAnimation />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
