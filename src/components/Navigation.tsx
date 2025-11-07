@@ -189,7 +189,7 @@ export const Navigation = () => {
                 </DropdownMenu>
               ) : (
                 <Link
-                  to="/auth"
+                  to="/"
                   onClick={() => setIsOpen(false)}
                   className="w-full pr-2"
                 >
