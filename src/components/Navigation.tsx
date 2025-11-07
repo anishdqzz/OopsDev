@@ -71,7 +71,7 @@ export const Navigation = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
-    window.location.href = "/auth";
+    window.location.href = "/";
   };
 
   return (
