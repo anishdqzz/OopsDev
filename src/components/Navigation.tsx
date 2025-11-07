@@ -1,6 +1,6 @@
 import { Code2, Menu, X, Home, Sun, Moon, User } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { useTheme } from "./ThemeProvider";
 import {
@@ -14,6 +14,7 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+  const navigate = useNavigate();
   const [typedText, setTypedText] = useState("");
   const fullText = "OopsDev";
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -182,14 +183,22 @@ export const Navigation = () => {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
-                    <DropdownMenuItem onClick={handleLogout}>
+                    {/* Change here: Logout action in mobile view */}
+                    <DropdownMenuItem
+                      onClick={() => {
+                        localStorage.removeItem("token");
+                        setIsLoggedIn(false);
+                        setIsOpen(false); // Close mobile menu
+                        navigate("/"); // Redirect to homepage after logout
+                      }}
+                    >
                       Logout
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
                 <Link
-                  to="/"
+                  to="/auth"
                   onClick={() => setIsOpen(false)}
                   className="w-full pr-2"
                 >
