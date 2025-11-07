@@ -200,7 +200,7 @@ export const Navigation = () => {
                 <Link
                   to="/auth"
                   onClick={() => setIsOpen(false)}
-                  className="w-full pr-2"
+                  className="flex-1 pr-2"
                 >
                   <Button variant="outline" className="w-full">
                     Login
