@@ -588,7 +588,7 @@ console.log("sessionStorage is a browser feature for session-specific data stora
 
     try {
       eval(code);
-      setOutputFn(logs.join("\\n"));
+      setOutputFn(logs.join("\n"));
     } catch (error) {
       let message = "Unknown Error";
       if (error instanceof Error) message = error.message;
